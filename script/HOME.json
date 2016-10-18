@@ -46,7 +46,7 @@
             {
               "type": "postback",
               "title": "Matthew's bio2",
-              "payload": "bio2"
+              "payload": "bio"
             }
             ]
           }, 
