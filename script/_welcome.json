@@ -1,0 +1,21 @@
+{
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "button",
+          "text": "Hi, I’m an AI-based assistant for ShopWare.I’ll send you a deals once a day. Type 'home' at anytime to start again",
+          "buttons":[
+            {
+              "type": "postback",
+              "title": "OK, what else?",
+              "payload": "subscribe"
+            },
+            {
+              "type": "postback",
+              "title": "No Thanks",
+              "payload": "unSubscribe"
+            }
+           ]
+        }
+      }
+}
