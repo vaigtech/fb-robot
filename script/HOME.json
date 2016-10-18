@@ -8,7 +8,7 @@
             "title": "TVs",
             "subtitle": "Shop electronics by TV!",
             "item_url": "https://www.walmart.com/browse/electronics/tvs/3944_1060825_447913",
-            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-5220/k2-_ace57524-f8e5-4fb9-8189-4f94adf6d011.v1.jpg?odnWidth=144&odnHeight=144&odnBg=ffffff",
+            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-5220/k2-_ace57524-f8e5-4fb9-8189-4f94adf6d011.v1.jpg",
             "buttons": [
             {
               "type": "postback",
@@ -31,7 +31,7 @@
             "title": "Laptops",
             "subtitle": "What is Lorem Ipsum?",
             "item_url": "https://www.walmart.com/browse/electronics/all-laptop-computers/3944_3951_1089430_132960",
-            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-ce9a/k2-_71a2c162-b553-428e-8e52-d149efbf0da9.v1.jpg?odnWidth=144&odnHeight=144&odnBg=ffffff",
+            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-ce9a/k2-_71a2c162-b553-428e-8e52-d149efbf0da9.v1.jpg",
             "buttons": [
             {
               "type": "postback",
@@ -54,7 +54,7 @@
             "title": "Desktop Computers ",
             "subtitle": "Where can I get some?",
             "item_url": "https://www.walmart.com/browse/desktop-computers/all-desktop-computers/3944_3951_132982_1231618",
-            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-4cae/k2-_caf3aa4c-7996-417c-a477-b2a4d92d4971.v1.jpg?odnWidth=144&odnHeight=144&odnBg=ffffff",
+            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-4cae/k2-_caf3aa4c-7996-417c-a477-b2a4d92d4971.v1.jpg",
             "buttons": [
             {
               "type": "postback",
@@ -77,7 +77,7 @@
             "title": "Cameras & Camcorders",
             "subtitle": "Lorem Ipsum is simply dummy text of the printing?",
             "item_url": "https://www.walmart.com/browse/3944_133277",
-            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-660d/k2-_a89e0beb-73e7-43b1-b0ac-8fe2a66501da.v1.jpg?odnWidth=144&odnHeight=144&odnBg=ffffff",
+            "image_url": "https://i5.wal.co/dfw/4ff9c6c9-660d/k2-_a89e0beb-73e7-43b1-b0ac-8fe2a66501da.v1.jpg",
             "buttons": [
             {
               "type": "web_url",
