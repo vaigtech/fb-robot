@@ -869,7 +869,7 @@ function sendGenericMessage(recipientId) {
             {
               "type": "postback",
               "title": "Matthew's bio",
-              "payload": "bio"
+              "payload": "bio1"
             }
             ]
           }, 
