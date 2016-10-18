@@ -1,0 +1,30 @@
+{
+      "text": "Thanks for your interest.",
+      "quick_replies": [
+        {
+          "content_type":"text",
+          "title":"Education1",
+          "payload":"Education"
+        },
+        {
+          "content_type":"text",
+          "title":"Software1",
+          "payload":"software"
+        },
+        {
+          "content_type":"text",
+          "title":"Languages1",
+          "payload":"languages"
+        },
+        {
+          "content_type":"text",
+          "title":"Architecture1",
+          "payload":"architecture"
+        },
+        {
+          "content_type":"text",
+          "title":"Home1",
+          "payload":"home"
+        }
+      ]
+}
