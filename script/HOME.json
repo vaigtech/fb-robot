@@ -45,8 +45,8 @@
             },
             {
               "type": "postback",
-              "title": "Matthew's bio",
-              "payload": "bio"
+              "title": "Matthew's bio2",
+              "payload": "bio2"
             }
             ]
           }, 
