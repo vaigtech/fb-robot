@@ -775,18 +775,18 @@ function sendProductMessage(recipientId) {
                                 "buttons": [
                                     {
                                         "type": "postback",
-                                        "title": "What is this Bot?",
-                                        "payload": "What is this Robot?"
+                                        "title": "Buy",
+                                        "payload": "Buy"
+                                    },
+                                    {
+                                        "type": "web_url",
+                                        "url": webUrl,
+                                        "title": "Walmart website"
                                     },
                                     {
                                         "type": "postback",
-                                        "title": "Your Business Bot",
-                                        "payload": "business"
-                                    },
-                                    {
-                                        "type": "postback",
-                                        "title": "I want a Bot!",
-                                        "payload": "I want one"
+                                        "title": "Show next",
+                                        "payload": "SHOW_NEXT_PRODUCT"
                                     }
                                 ]
                             }
