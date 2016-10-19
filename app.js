@@ -25,9 +25,7 @@ const   scriptRules = require('./script.json');
 const   jokes = require('./script/JOKES.json');
 const walmartApiKey = 'q7m3qxhmh8prmxfzxfrrza88';
 var walmart = require('walmart')(walmartApiKey);
-walmart.getItem(10449075).then(function(item) {
-    console.log(item.product.productAttributes.productName);
-});
+
 //console.log("walmart ");
 //console.log(walmart);
 
@@ -314,7 +312,11 @@ function handleReceivedMessage(event) {
       case 'remove menu':
         removePersistentMenu();
         break        
-
+      case 'walmart':
+          walmart.getItem(10449075).then(function(item) {
+              console.log(item.product.productAttributes.productName);
+          });
+        break
       case 'stop':  // Stop the Bot from responding if the admin sends this messages
          if(senderID ==  1073962542672604) {
             console.log("Stoppping bot");
