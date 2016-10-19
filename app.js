@@ -23,6 +23,10 @@ var fs = require('fs');
 const _ = require('lodash');
 const   scriptRules = require('./script.json');
 const   jokes = require('./script/JOKES.json');
+const walmartApiKey = 'q7m3qxhmh8prmxfzxfrrza88';
+var walmart = require('walmart')(walmartApiKey);
+console.log("walmart ");
+console.log(walmart);
 
 
 var previousMessageHash = {};
