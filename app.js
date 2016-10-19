@@ -632,8 +632,8 @@ console.log("sendCustoMessage "+ messageText);
       case 'addkeyword_button3':
         addKeywordButtonStep3(recipientId,3);
         break
-      case 'goods':
-          sendGoodsMessage(recipientId);
+      case 'product':
+          sendProductMessage(recipientId);
         break
 
       case 'show_variables':
@@ -749,48 +749,53 @@ function sendJoke(recipientId) {
 }
 
 
-function sendGoodsMessage(recipientId) {
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message:
-        {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "generic",
-                    "elements": [
-                        {
-                            "title": "Bots"+recipientId,
-                            "subtitle": "The rise of the Facebook Bot!",
-                            "item_url": "http://www.dynamic-memory.com/",
-                            "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/robot.png",
-                            "buttons": [
-                                {
-                                    "type": "postback",
-                                    "title": "What is this Bot?",
-                                    "payload": "What is this Robot?"
-                                },
-                                {
-                                    "type": "postback",
-                                    "title": "Your Business Bot",
-                                    "payload": "business"
-                                },
-                                {
-                                    "type": "postback",
-                                    "title": "I want a Bot!",
-                                    "payload": "I want one"
-                                }
-                            ]
-                        }
-                    ]
+function sendProductMessage(recipientId) {
+    walmart.getItem(37469910).then(function(item) {
+        var productName = item.name;
+        console.log(item);
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message:
+            {
+                "attachment": {
+                    "type": "template",
+                    "payload": {
+                        "template_type": "generic",
+                        "elements": [
+                            {
+                                "title": "Bots"+productName,
+                                "subtitle": "The rise of the Facebook Bot!",
+                                "item_url": "http://www.dynamic-memory.com/",
+                                "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/robot.png",
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "What is this Bot?",
+                                        "payload": "What is this Robot?"
+                                    },
+                                    {
+                                        "type": "postback",
+                                        "title": "Your Business Bot",
+                                        "payload": "business"
+                                    },
+                                    {
+                                        "type": "postback",
+                                        "title": "I want a Bot!",
+                                        "payload": "I want one"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             }
-        }
-    };
+        };
 
-    callSendAPI(messageData);
+        callSendAPI(messageData);
+    });
+
 }
 
 /*
