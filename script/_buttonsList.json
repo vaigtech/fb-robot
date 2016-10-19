@@ -11,15 +11,43 @@
               "payload": "+15105551234"
             },
             {
-              "type": "postback",
-              "title": "Choose age",
-              "payload": "CHOOSE AGE CATEGORY"
+              "type": "element_share"
             },
             {
               "type": "postback",
               "title": "Show Category",
               "payload": "MENU"
+            },
+            {
+              "type":"payment",
+              "title":"buy",
+              "payload":"DEVELOPER_DEFINED_PAYLOAD",
+              "payment_summary":{
+                "currency":"USD",
+                "payment_type":"FIXED_AMOUNT",
+                "merchant_name":"Peter's Apparel",
+                "requested_user_info":[
+                  "shipping_address",
+                  "contact_name",
+                  "contact_phone",
+                  "contact_email"
+                ],
+                "price_list":[
+                  {
+                    "label":"Subtotal",
+                    "amount":"29.99"
+                  },
+                  {
+                    "label":"Taxes",
+                    "amount":"2.47"
+                  }
+                ]
+              }
             }
+
+
+
+
            ]
         }
       }
