@@ -787,7 +787,6 @@ function sendProductMessage(recipientId) {
                                         "type": "postback",
                                         "title": "Buy",
                                         "payload": "RECEIPT",
-                                        "webview_height_ratio": "compact"
                                     },
                                     {
                                         "type": "web_url",
@@ -799,7 +798,6 @@ function sendProductMessage(recipientId) {
                                         "type": "postback",
                                         "title": "Show next",
                                         "payload": "PRODUCT",
-                                        "webview_height_ratio": "compact"
                                     }
                                 ]
                             }
