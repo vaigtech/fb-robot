@@ -687,7 +687,8 @@ console.log("sendJsonMessage " + keyword);
       sendSingleJsonMessage(recipientId,customRules[keyword.toUpperCase()]);
   }
   else  {
-      sendSingleJsonMessage(recipientId,"HOME.json");
+      sendTextMessage(recipientId, "I Do not understand.Please select product category.");
+      sendSingleJsonMessage(recipientId,"_menu.json");
   }
 }
 

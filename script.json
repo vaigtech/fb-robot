@@ -1,5 +1,6 @@
 {
     "MENU" : "_menu.json",
+    "CHOOSE PRODUCT CATEGORY" : "_menu.json",
     "WELCOME" : "_welcome.json",
     "CHOOSE GENDER CATEGORY" : "_chooseGender.json",
     "CHOOSE AGE CATEGORY" : "_chooseAge.json",
