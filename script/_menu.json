@@ -12,8 +12,8 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Choose this Gender",
-                "payload": "reponse_chooseCategory_TVS"
+                "title": "Choose this category",
+                "payload": "response_chooseCategory_TVS"
               }
             ]
           }, 
@@ -25,8 +25,8 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Choose this Gender",
-                "payload": "reponse_chooseCategory_LAPTOPS"
+                "title": "Show Product from Laptops",
+                "payload": "response_chooseCategory_LAPTOPS"
               }
             ]
           }, 
@@ -38,8 +38,8 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Choose this Gender",
-                "payload": "reponse_chooseCategory_COMPUTERS"
+                "title": "Show Product from Desktop Computers",
+                "payload": "response_chooseCategory_COMPUTERS"
               }
             ]
           },
@@ -51,8 +51,8 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Choose this Gender",
-                "payload": "reponse_chooseCategory_CAMERAS"
+                "title": "Show Product from Cameras & Camcorders",
+                "payload": "response_chooseCategory_CAMERAS"
               }
             ]
           }

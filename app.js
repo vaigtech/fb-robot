@@ -648,19 +648,19 @@ console.log("sendCustoMessage "+ messageText);
           SELECTED_CUSTOMER_AGE = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
         break
-      case 'reponse_choosegender_children':
-      case 'reponse_chooseage_men':
-      case 'reponse_choosegender_youth':
-      case 'reponse_choosegender_adults':
+      case 'response_choosegender_children':
+      case 'response_chooseage_men':
+      case 'response_choosegender_youth':
+      case 'response_choosegender_adults':
           SELECTED_CUSTOMER_GENDER = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
         break
-      case 'reponse_choosecategory_tvs':
-      case 'reponse_choosecategory_laptops':
-      case 'reponse_choosecategory_computers':
-      case 'reponse_choosecategory_cameras':
+      case 'response_choosecategory_tvs':
+      case 'response_choosecategory_laptops':
+      case 'response_choosecategory_computers':
+      case 'response_choosecategory_cameras':
           SELECTED_CATEGORY = extractResponce(messageTxt);
-          sendProductMessage('product');
+          sendProductMessage(recipientId);
         break
       default:
          sendJsonMessage(recipientId,messageText);
