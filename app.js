@@ -631,6 +631,7 @@ console.log("sendCustoMessage "+ messageText);
       case 'chooseAge_JUNIOR':
       case 'chooseAge_GIRL':
       case 'chooseAge_BOY':
+          console.log("chooseAge_" + messageTxt);
           CUSTOMER_AGE = messageTxt;
         break
       default:
@@ -1310,7 +1311,7 @@ fs.readFile(filename, function read(err, data) {
 }
 
 function show_variables(recipientId){
-    console.log("show_variables ");
+    console.log("show_variables");
     sendTextMessage(recipientId,"selected age."+CUSTOMER_AGE);
     sendTextMessage(recipientId,"selected gender."+CUSTOMER_GENDER);
 }
