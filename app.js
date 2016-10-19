@@ -314,7 +314,6 @@ function handleReceivedMessage(event) {
         break        
       case 'walmart':
           walmart.getItem(37469910).then(function(item) {
-              console.log(item);
               console.log(item.product.productAttributes.productName);
           });
         break
