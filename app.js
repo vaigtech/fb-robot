@@ -786,17 +786,20 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "postback",
                                         "title": "Buy",
-                                        "payload": "RECEIPT"
+                                        "payload": "RECEIPT",
+                                        "webview_height_ratio": "compact"
                                     },
                                     {
                                         "type": "web_url",
                                         "url": webUrl,
-                                        "title": "Buy from Walmart"
+                                        "title": "Buy from Walmart",
+                                        "webview_height_ratio": "compact"
                                     },
                                     {
                                         "type": "postback",
                                         "title": "Show next",
-                                        "payload": "PRODUCT"
+                                        "payload": "PRODUCT",
+                                        "webview_height_ratio": "compact"
                                     }
                                 ]
                             }
