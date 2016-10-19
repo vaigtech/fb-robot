@@ -632,14 +632,14 @@ console.log("sendCustoMessage "+ messageText);
       case 'reponse_chooseage_girl':
       case 'reponse_chooseage_boy':
           CUSTOMER_AGE = extractResponce(messageTxt);
-          checkNecessaryVariables();
+          checkNecessaryVariables(recipientId);
         break
       case 'reponse_choosegender_children':
       case 'reponse_chooseage_men':
       case 'reponse_choosegender_youth':
       case 'reponse_choosegender_adults':
           CUSTOMER_GENDER = extractResponce(messageTxt);
-          checkNecessaryVariables();
+          checkNecessaryVariables(recipientId);
         break
       default:
          sendJsonMessage(recipientId,messageText);
@@ -647,7 +647,7 @@ console.log("sendCustoMessage "+ messageText);
     }
     previousMessageHash[recipientId] = messageText.toLowerCase();
 }
-function checkNecessaryVariables(){
+function checkNecessaryVariables(recipientId){
     var messageText;
     if(CUSTOMER_GENDER == 0){
         messageText = 'CHOOSE AGE CATEGORY';
