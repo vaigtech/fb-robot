@@ -34,8 +34,9 @@ var previousMessageHash = {};
 var senderContext = {};
 var isStopped = false;
 
-var CUSTOMER_AGE = 0;
-var CUSTOMER_GENDER = 0;
+var SELECTED_CUSTOMER_AGE = 0;
+var SELECTED_CUSTOMER_GENDER = 0;
+var SELECTED_CATEGORY = 0;
 
 var app = express();
 
@@ -644,15 +645,22 @@ console.log("sendCustoMessage "+ messageText);
       case 'reponse_chooseage_junior':
       case 'reponse_chooseage_girl':
       case 'reponse_chooseage_boy':
-          CUSTOMER_AGE = extractResponce(messageTxt);
+          SELECTED_CUSTOMER_AGE = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
         break
       case 'reponse_choosegender_children':
       case 'reponse_chooseage_men':
       case 'reponse_choosegender_youth':
       case 'reponse_choosegender_adults':
-          CUSTOMER_GENDER = extractResponce(messageTxt);
+          SELECTED_CUSTOMER_GENDER = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
+        break
+      case 'reponse_choosecategory_tvs':
+      case 'reponse_choosecategory_laptops':
+      case 'reponse_choosecategory_computers':
+      case 'reponse_choosecategory_cameras':
+          SELECTED_CATEGORY = extractResponce(messageTxt);
+          sendProductMessage('product');
         break
       default:
          sendJsonMessage(recipientId,messageText);
@@ -662,10 +670,10 @@ console.log("sendCustoMessage "+ messageText);
 }
 function checkNecessaryVariables(recipientId){
     var messageText;
-    if(CUSTOMER_GENDER == 0){
+    if(SELECTED_CUSTOMER_GENDER == 0){
         messageText = 'CHOOSE AGE CATEGORY';
         sendJsonMessage(recipientId,messageText);
-    }else if(CUSTOMER_AGE == 0){
+    }else if(SELECTED_CUSTOMER_AGE == 0){
         messageText = 'CHOOSE GENDER CATEGORY';
         sendJsonMessage(recipientId,messageText);
     }else{
@@ -1383,16 +1391,7 @@ function addKeywordTextStep2(recipientId,messageText)
            customRules[senderContext[recipientId].keyword.toUpperCase()] = senderContext[recipientId].keyword.toUpperCase();
            sendTextMessage(recipientId,"The keyword has been added.  Please type in the keyword to see the response.");
 
-/*
-fs.readFile(filename, function read(err, data) {
-    if (err) {
-        throw err;
-    }
 
-    // Invoke the next step here however you like
-    console.log("file contains: " + data);  
-});
-*/
         }
      ); 
    }
@@ -1403,9 +1402,9 @@ fs.readFile(filename, function read(err, data) {
 }
 
 function show_variables(recipientId){
-    console.log("show_variables");
-    sendTextMessage(recipientId,"selected age."+CUSTOMER_AGE);
-    sendTextMessage(recipientId,"selected gender."+CUSTOMER_GENDER);
+    sendTextMessage(recipientId,"selected age."+SELECTED_CUSTOMER_AGE);
+    sendTextMessage(recipientId,"selected gender."+SELECTED_CUSTOMER_GENDER);
+    sendTextMessage(recipientId,"selected category."+SELECTED_CATEGORY);
 }
 function addKeywordButton(recipientId)
 {
