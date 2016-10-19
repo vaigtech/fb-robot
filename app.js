@@ -751,7 +751,7 @@ function sendJoke(recipientId) {
 
 function sendProductMessage(recipientId) {
     walmart.getItem(37469910).then(function(item) {
-        var productName = item.name;
+        var productName = item.product.productName;
         console.log(item);
         var messageData = {
             recipient: {
