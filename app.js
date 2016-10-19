@@ -626,11 +626,11 @@ console.log("sendCustoMessage "+ messageText);
       case 'show_variables':
           show_variables(recipientId);
         break
-      case 'chooseAge_WOMEN':
-      case 'chooseAge_MEN':
-      case 'chooseAge_JUNIOR':
-      case 'chooseAge_GIRL':
-      case 'chooseAge_BOY':
+      case 'chooseage_women':
+      case 'chooseage_men':
+      case 'chooseage_junior':
+      case 'chooseage_girl':
+      case 'chooseage_boy':
           console.log("chooseAge_" + messageTxt);
           CUSTOMER_AGE = messageTxt;
         break
