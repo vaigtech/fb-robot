@@ -648,6 +648,7 @@ console.log("sendCustoMessage "+ messageText);
     previousMessageHash[recipientId] = messageText.toLowerCase();
 }
 function checkNecessaryVariables(){
+    var messageText;
     if(CUSTOMER_GENDER == 0){
         messageText = 'CHOOSE AGE CATEGORY';
         sendJsonMessage(recipientId,messageText);
