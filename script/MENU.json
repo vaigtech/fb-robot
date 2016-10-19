@@ -12,6 +12,11 @@
             "buttons": [
             {
               "type": "postback",
+              "title": "Choose Gender",
+              "payload": "CHOOSE GENDER CATEGORY"
+            },
+            {
+              "type": "postback",
               "title": "What is this Bot?",
               "payload": "What is this Robot?"
             },
