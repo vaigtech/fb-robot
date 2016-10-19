@@ -786,7 +786,7 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "postback",
                                         "title": "Buy",
-                                        "payload": "Buy"
+                                        "payload": "receipt"
                                     },
                                     {
                                         "type": "web_url",
