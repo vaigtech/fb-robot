@@ -7,13 +7,18 @@
           "buttons":[
             {
               "type": "postback",
-              "title": "OK, what else?",
-              "payload": "subscribe"
+              "title": "Choose Gender",
+              "payload": "CHOOSE GENDER CATEGORY"
             },
             {
               "type": "postback",
-              "title": "No Thanks",
-              "payload": "unSubscribe"
+              "title": "Choose Age",
+              "payload": "CHOOSE AGE CATEGORY"
+            },
+            {
+              "type": "postback",
+              "title": "Show Category",
+              "payload": "MENU"
             }
            ]
         }
