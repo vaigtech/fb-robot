@@ -752,6 +752,9 @@ function sendJoke(recipientId) {
 function sendProductMessage(recipientId) {
     walmart.getItem(37469910).then(function(item) {
         var productName = item.product.productName;
+        var shortDescription = item.product.shortDescription;
+        var primaryImageUrl = item.product.primaryImageUrl;
+        var webUrl = 'https://www.walmart.com'+item.product.canonicalUrl;
         console.log(item);
         var messageData = {
             recipient: {
@@ -765,10 +768,10 @@ function sendProductMessage(recipientId) {
                         "template_type": "generic",
                         "elements": [
                             {
-                                "title": "Bots"+productName,
-                                "subtitle": "The rise of the Facebook Bot!",
-                                "item_url": "http://www.dynamic-memory.com/",
-                                "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/robot.png",
+                                "title": productName,
+                                "subtitle": shortDescription,
+                                "item_url": webUrl,
+                                "image_url": primaryImageUrl,
                                 "buttons": [
                                     {
                                         "type": "postback",
