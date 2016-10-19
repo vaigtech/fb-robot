@@ -9,12 +9,7 @@
               "type": "phone_number",
               "title": "Call Representative",
               "payload": "+15105551234"
-            },
-            {
-              "type": "element_share"
             }
-
-           ]
         }
       }
 }
