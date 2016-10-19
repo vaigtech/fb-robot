@@ -7,7 +7,7 @@
           "buttons":[
           {
             "type": "postback",
-            "title": "Home",
+            "title": "Menu",
             "payload": "MENU"
           }
 
