@@ -751,7 +751,7 @@ function sendJoke(recipientId) {
 
 function sendProductMessage(recipientId) {
     var productId = 37469910 + Math.floor(Math.random()*1000);
-    walmart.getItem(37469910).then(function(item) {
+    walmart.getItem(productId).then(function(item) {
         var productName = item.product.productName;
         var shortDescription = item.product.shortDescription;
         var primaryImageUrl = item.product.primaryImageUrl;
