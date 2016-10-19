@@ -750,6 +750,7 @@ function sendJoke(recipientId) {
 
 
 function sendProductMessage(recipientId) {
+    var productId = 37469910 + Math.floor(Math.random()*1000);
     walmart.getItem(37469910).then(function(item) {
         var productName = item.product.productName;
         var shortDescription = item.product.shortDescription;
@@ -786,7 +787,7 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "postback",
                                         "title": "Show next",
-                                        "payload": "SHOW_NEXT_PRODUCT"
+                                        "payload": "PRODUCT"
                                     }
                                 ]
                             }
