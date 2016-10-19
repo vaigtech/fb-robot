@@ -530,7 +530,8 @@ function sendFileMessage(recipientId) {
 
 function sendSingleJsonMessage(recipientId,filename) {
    try {
-      filename = "./script/" + filename;
+     console.log('sendSingleJsonMessage', filename);
+     filename = "./script/" + filename;
       var json  = require(filename);
       var fullMessage = { recipient: { id: recipientId  }};
       fullMessage.message = json;
