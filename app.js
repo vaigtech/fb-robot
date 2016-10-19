@@ -657,8 +657,8 @@ function checkNecessaryVariables(recipientId){
         sendJsonMessage(recipientId,messageText);
     }else{
         messageText = 'MENU';
-        sendTextMessage(recipientId,"Excellent now i Please select category.");
-        sendJsonMessage(recipientId,messageText);
+        sendTextMessage(recipientId, "Excellent now i Please select category.");
+        sendJsonMessage(recipientId, messageText);
     }
 }
 function extractResponce(messageTxt){
