@@ -786,7 +786,7 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "postback",
                                         "title": "Buy",
-                                        "payload": "receipt"
+                                        "payload": "RECEIPT"
                                     },
                                     {
                                         "type": "element_share",
@@ -796,7 +796,7 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "web_url",
                                         "url": webUrl,
-                                        "title": "Buy from Walmart website"
+                                        "title": "Buy from Walmart"
                                     },
                                     {
                                         "type": "postback",
