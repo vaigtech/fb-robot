@@ -1,8 +1,9 @@
 {
     "MENU" : "_menu.json",
     "WELCOME" : "_welcome.json",
-    "CHOOSE GENDER CATEGORY" : "_chooseGender.json",
+    "CHOOSE GENDER CATEGORY" : "_chooseAge.json",
     "CHOOSE AGE CATEGORY" : "_chooseAge.json",
+    "SUBSCRIBE" : "_subscribe.json",
 
     "WHAT IS THIS ROBOT?" : "HELLO.json",
     "HOW DOES IT WORK?" : "ROBOT.json",
