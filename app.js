@@ -791,7 +791,7 @@ function sendProductMessage(recipientId) {
                                     {
                                         "type": "web_url",
                                         "url": webUrl,
-                                        "title": "Walmart website"
+                                        "title": "Buy from Walmart website"
                                     },
                                     {
                                         "type": "postback",
