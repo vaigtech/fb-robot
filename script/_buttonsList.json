@@ -11,14 +11,6 @@
               "payload": "+15105551234"
             },
             {
-              "type": "element_share"
-            },
-            {
-              "type": "postback",
-              "title": "Show Category",
-              "payload": "MENU"
-            },
-            {
               "type":"payment",
               "title":"buy",
               "payload":"DEVELOPER_DEFINED_PAYLOAD",
