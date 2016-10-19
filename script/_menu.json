@@ -15,11 +15,7 @@
               "title": "Choose Gender",
               "payload": "CHOOSE GENDER CATEGORY"
             },
-            {
-              "type": "postback",
-              "title": "What is this Bot?",
-              "payload": "What is this Robot?"
-            },
+
             {
               "type": "postback",
               "title": "Your Business Bot",
