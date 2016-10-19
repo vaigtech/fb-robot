@@ -4,27 +4,27 @@
         {
           "content_type":"text",
           "title":"Women's",
-          "payload":"chooseAge_WOMEN"
+          "payload":"reponse_chooseAge_WOMEN"
         },
         {
           "content_type":"text",
           "title":"Men's",
-          "payload":"chooseAge_MEN"
+          "payload":"reponse_chooseAge_MEN"
         },
         {
           "content_type":"text",
           "title":"Juniors",
-          "payload":"chooseAge_JUNIOR"
+          "payload":"reponse_chooseAge_JUNIOR"
         },
         {
           "content_type":"text",
           "title":"Girls'",
-          "payload":"chooseAge_GIRL"
+          "payload":"reponse_chooseAge_GIRL"
         },
         {
           "content_type":"text",
           "title":"Boys'",
-          "payload":"chooseAge_BOY"
+          "payload":"reponse_chooseAge_BOY"
         }
       ]
 }

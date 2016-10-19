@@ -4,17 +4,17 @@
         {
           "content_type":"text",
           "title":"Children(0-14 years)",
-          "payload":"chooseGender_CHILDREN"
+          "payload":"reponse_chooseGender_CHILDREN"
         },
         {
           "content_type":"text",
           "title":"Youth (15-24 years)",
-          "payload":"chooseGender_YOUTH"
+          "payload":"reponse_chooseGender_YOUTH"
         },
         {
           "content_type":"text",
           "title":"Adults (25-64 years)",
-          "payload":"chooseGender_ADULTS"
+          "payload":"reponse_chooseGender_ADULTS"
         }
       ]
 }

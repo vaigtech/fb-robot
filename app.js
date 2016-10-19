@@ -626,22 +626,22 @@ console.log("sendCustoMessage "+ messageText);
       case 'show_variables':
           show_variables(recipientId);
         break
-      case 'chooseage_women':
-      case 'chooseage_men':
-      case 'chooseage_junior':
-      case 'chooseage_girl':
-      case 'chooseage_boy':
-          CUSTOMER_AGE = messageTxt;
+      case 'reponse_chooseage_women':
+      case 'reponse_chooseage_men':
+      case 'reponse_chooseage_junior':
+      case 'reponse_chooseage_girl':
+      case 'reponse_chooseage_boy':
+          CUSTOMER_AGE = extractResponce(messageTxt);
           if(CUSTOMER_GENDER == 0){
               messageText = 'CHOOSE AGE CATEGORY';
               sendJsonMessage(recipientId,messageText);
           }
         break
-      case 'choosegender_children':
-      case 'chooseage_men':
-      case 'choosegender_youth':
-      case 'choosegender_adults':
-          CUSTOMER_GENDER = messageTxt;
+      case 'reponse_choosegender_children':
+      case 'reponse_chooseage_men':
+      case 'reponse_choosegender_youth':
+      case 'reponse_choosegender_adults':
+          CUSTOMER_GENDER = extractResponce(messageTxt);
           if(CUSTOMER_AGE == 0){
               messageText = 'CHOOSE GENDER CATEGORY';
               sendJsonMessage(recipientId,messageText);
@@ -653,7 +653,10 @@ console.log("sendCustoMessage "+ messageText);
     }
     previousMessageHash[recipientId] = messageText.toLowerCase();
 }
-
+function extractResponce(messageTxt){
+    var messageArr = messageTxt.split("_");
+    return messageArr[2];
+}
 function sendJsonMessage(recipientId,keyword) {
 console.log("sendJsonMessage " + keyword);
   if (_.has(scriptRules, keyword.toUpperCase())) {
