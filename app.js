@@ -789,11 +789,6 @@ function sendProductMessage(recipientId) {
                                         "payload": "RECEIPT"
                                     },
                                     {
-                                        "type": "element_share",
-                                        "title": "Share",
-                                        "payload": "Share"
-                                    },
-                                    {
                                         "type": "web_url",
                                         "url": webUrl,
                                         "title": "Buy from Walmart"
