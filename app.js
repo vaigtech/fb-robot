@@ -631,8 +631,21 @@ console.log("sendCustoMessage "+ messageText);
       case 'chooseage_junior':
       case 'chooseage_girl':
       case 'chooseage_boy':
-          console.log("chooseAge_" + messageTxt);
           CUSTOMER_AGE = messageTxt;
+          if(CUSTOMER_GENDER == 0){
+              messageText = 'CHOOSE AGE CATEGORY';
+              sendJsonMessage(recipientId,messageText);
+          }
+        break
+      case 'choosegender_children':
+      case 'chooseage_men':
+      case 'choosegender_youth':
+      case 'choosegender_adults':
+          CUSTOMER_GENDER = messageTxt;
+          if(CUSTOMER_AGE == 0){
+              messageText = 'CHOOSE GENDER CATEGORY';
+              sendJsonMessage(recipientId,messageText);
+          }
         break
       default:
          sendJsonMessage(recipientId,messageText);
