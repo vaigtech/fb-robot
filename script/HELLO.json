@@ -8,7 +8,7 @@
           {
             "type": "postback",
             "title": "Home",
-            "payload": "home"
+            "payload": "MENU"
           }
 
            ]
