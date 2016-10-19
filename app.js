@@ -313,7 +313,8 @@ function handleReceivedMessage(event) {
         removePersistentMenu();
         break        
       case 'walmart':
-          walmart.getItem(10449075).then(function(item) {
+          walmart.getItem(37469910).then(function(item) {
+              console.log(item);
               console.log(item.product.productAttributes.productName);
           });
         break
