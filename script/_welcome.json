@@ -12,7 +12,7 @@
             },
             {
               "type": "postback",
-              "title": "Choose Age",
+              "title": "Choose age category",
               "payload": "CHOOSE AGE CATEGORY"
             },
             {
