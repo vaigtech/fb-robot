@@ -12,6 +12,9 @@
         "title":"Green",
         "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN",
         "image_url":"https://cdn4.iconfinder.com/data/icons/24x24-free-pixel-icons/24/Accept.png"
+      },
+      {
+        "content_type":"location",
       }
     ]
 }
