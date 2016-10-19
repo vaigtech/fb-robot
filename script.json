@@ -1,5 +1,5 @@
 {
-    "HOME" : "HOME.json",
+    "MENU" : "MENU.json",
     "WELCOME" : "_welcome.json",
     "WHAT IS THIS ROBOT?" : "HELLO.json",
     "HOW DOES IT WORK?" : "ROBOT.json",
@@ -14,7 +14,7 @@
     "BIO2" : "BIO2.json",
     "HELLO" : "HELLO.json",
     "HI" : "HELLO.json",
-    "MENU" : "HELLO.json",
+    "HOME" : "HELLO.json",
     "ROBOT" : "ROBOT.json",
     "EDUCATION": "EDUCATION.json",
     "SOFTWARE": "SOFTWARE.json",
