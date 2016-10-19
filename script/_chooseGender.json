@@ -5,7 +5,26 @@
           "content_type":"text",
           "title":"Women's",
           "payload":"Women"
+        },
+        {
+          "content_type":"text",
+          "title":"Men's",
+          "payload":"Men"
+        },
+        {
+          "content_type":"text",
+          "title":"Juniors",
+          "payload":"Junior"
+        },
+        {
+          "content_type":"text",
+          "title":"Girls'",
+          "payload":"Girl"
+        },
+        {
+          "content_type":"text",
+          "title":"Boys'",
+          "payload":"Boy"
         }
-
       ]
 }

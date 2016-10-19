@@ -4,22 +4,7 @@
         {
           "content_type":"text",
           "title":"Children 0-14 years",
-          "payload":"Children"
-        },
-        {
-          "content_type":"text",
-          "title":"Youth (15-24 years)",
-          "payload":"Youth"
-        },
-        {
-          "content_type":"text",
-          "title":"Adults (25-64 years)",
-          "payload":"Adults"
-        },
-        {
-          "content_type":"text",
-          "title":"Seniors (65 years and over)",
-          "payload":"Seniors"
+          "payload":"CHILDREN"
         }
       ]
 }
