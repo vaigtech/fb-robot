@@ -632,6 +632,10 @@ console.log("sendCustoMessage "+ messageText);
       case 'addkeyword_button3':
         addKeywordButtonStep3(recipientId,3);
         break
+      case 'goods':
+          sendGoodsMessage(recipientId);
+        break
+
       case 'show_variables':
           show_variables(recipientId);
         break
@@ -742,6 +746,51 @@ function sendJoke(recipientId) {
   };
 
   callSendAPI(messageData);
+}
+
+
+function sendGoodsMessage(recipientId) {
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message:
+        {
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "generic",
+                    "elements": [
+                        {
+                            "title": "Bots"+recipientId,
+                            "subtitle": "The rise of the Facebook Bot!",
+                            "item_url": "http://www.dynamic-memory.com/",
+                            "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/robot.png",
+                            "buttons": [
+                                {
+                                    "type": "postback",
+                                    "title": "What is this Bot?",
+                                    "payload": "What is this Robot?"
+                                },
+                                {
+                                    "type": "postback",
+                                    "title": "Your Business Bot",
+                                    "payload": "business"
+                                },
+                                {
+                                    "type": "postback",
+                                    "title": "I want a Bot!",
+                                    "payload": "I want one"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    };
+
+    callSendAPI(messageData);
 }
 
 /*
