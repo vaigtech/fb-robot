@@ -1,6 +1,6 @@
 {
       "attachment": {
-        "text":'wwwwwwwwwwwwwwwwwwwwwwww'+CUSTOMER_GENDER,
+        "text":'wwwwwwwwwwwwwwwwwwwwwwww',
         "type": "template",
         "payload": {
          "template_type": "generic",

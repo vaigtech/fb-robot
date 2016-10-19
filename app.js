@@ -632,26 +632,32 @@ console.log("sendCustoMessage "+ messageText);
       case 'reponse_chooseage_girl':
       case 'reponse_chooseage_boy':
           CUSTOMER_AGE = extractResponce(messageTxt);
-          if(CUSTOMER_GENDER == 0){
-              messageText = 'CHOOSE AGE CATEGORY';
-              sendJsonMessage(recipientId,messageText);
-          }
+          checkNecessaryVariables();
         break
       case 'reponse_choosegender_children':
       case 'reponse_chooseage_men':
       case 'reponse_choosegender_youth':
       case 'reponse_choosegender_adults':
           CUSTOMER_GENDER = extractResponce(messageTxt);
-          if(CUSTOMER_AGE == 0){
-              messageText = 'CHOOSE GENDER CATEGORY';
-              sendJsonMessage(recipientId,messageText);
-          }
+          checkNecessaryVariables();
         break
       default:
          sendJsonMessage(recipientId,messageText);
 
     }
     previousMessageHash[recipientId] = messageText.toLowerCase();
+}
+function checkNecessaryVariables(){
+    if(CUSTOMER_GENDER == 0){
+        messageText = 'CHOOSE AGE CATEGORY';
+        sendJsonMessage(recipientId,messageText);
+    }else if(CUSTOMER_AGE == 0){
+        messageText = 'CHOOSE GENDER CATEGORY';
+        sendJsonMessage(recipientId,messageText);
+    }else{
+        messageText = 'MENU';
+        sendJsonMessage(recipientId,messageText);
+    }
 }
 function extractResponce(messageTxt){
     var messageArr = messageTxt.split("_");
