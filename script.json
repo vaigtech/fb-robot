@@ -6,6 +6,7 @@
     "CHOOSE AGE CATEGORY" : "_chooseAge.json",
     "SUBSCRIBE" : "_subscribe.json",
     "GOODS1" : "_goods.json",
+    "BUTTTONSLIST" : "_buttonsList.json",
 
     "WHAT IS THIS ROBOT?" : "HELLO.json",
     "HOW DOES IT WORK?" : "ROBOT.json",
