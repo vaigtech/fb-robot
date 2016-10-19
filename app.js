@@ -29,6 +29,8 @@ var previousMessageHash = {};
 var senderContext = {};
 var isStopped = false;
 
+var CUSTOMER_AGE = 0;
+var CUSTOMER_GENDER = 0;
 
 var app = express();
 
@@ -340,25 +342,25 @@ function handleReceivedMessage(event) {
  */
 
 function receivedDeliveryConfirmation(event) {
-  if(isStopped == true)
-  {
-    return;
-  }
-  var senderID = event.sender.id;
-  var recipientID = event.recipient.id;
-  var delivery = event.delivery;
-  var messageIDs = delivery.mids;
-  var watermark = delivery.watermark;
-  var sequenceNumber = delivery.seq;
+    if(isStopped == true){
+        return;
+    }
+    var senderID = event.sender.id;
+    var recipientID = event.recipient.id;
+    var delivery = event.delivery;
+    var messageIDs = delivery.mids;
+    var watermark = delivery.watermark;
+    var sequenceNumber = delivery.seq;
 
-  if (messageIDs) {
-    messageIDs.forEach(function(messageID) {
-      console.log("Received delivery confirmation for message ID: %s", 
-        messageID);
-    });
-  }
 
-  console.log("All message before %d were delivered.", watermark);
+    if (messageIDs) {
+        messageIDs.forEach(function(messageID) {
+          console.log("Received delivery confirmation for message ID: %s",
+            messageID);
+        });
+    }
+
+    console.log("All message before %d were delivered.", watermark);
 }
 
 
@@ -579,8 +581,8 @@ console.log("sendEnteredMessage "+ messageText);
 function sendCustomMessage(recipientId,messageText) {
 
 console.log("sendCustoMessage "+ messageText);
-
-    switch (messageText.toLowerCase()) {
+    var messageTxt = messageText.toLowerCase()
+    switch (messageTxt) {
 
       case 'joke':
         sendJoke(recipientId);
@@ -621,8 +623,16 @@ console.log("sendCustoMessage "+ messageText);
       case 'addkeyword_button3':
         addKeywordButtonStep3(recipientId,3);
         break
-
-
+      case 'show_variables':
+          show_variables(recipientId);
+        break
+      case 'chooseAge_WOMEN':
+      case 'chooseAge_MEN':
+      case 'chooseAge_JUNIOR':
+      case 'chooseAge_GIRL':
+      case 'chooseAge_BOY':
+          CUSTOMER_AGE = messageTxt;
+        break
       default:
          sendJsonMessage(recipientId,messageText);
 
@@ -1299,6 +1309,11 @@ fs.readFile(filename, function read(err, data) {
    }
 }
 
+function show_variables(recipientId){
+    console.log("show_variables ");
+    sendTextMessage(recipientId,"selected age."+CUSTOMER_AGE);
+    sendTextMessage(recipientId,"selected gender."+CUSTOMER_GENDER);
+}
 function addKeywordButton(recipientId)
 {
    console.log("addKeywordButton " + JSON.stringify(senderContext));

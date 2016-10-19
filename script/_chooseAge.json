@@ -15,11 +15,6 @@
           "content_type":"text",
           "title":"Adults (25-64 years)",
           "payload":"ADULTS"
-        },
-        {
-          "content_type":"text",
-          "title":"Seniors (65 years and over)",
-          "payload":"SENIORS"
         }
       ]
 }
