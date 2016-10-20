@@ -964,9 +964,9 @@ function sendGenericMessage(recipientId) {
             ]
           }, 
           {
-            "title": "DMS Software",
+            "title": "Software",
             "subtitle": "Software Engineering is awesome",
-            "item_url": "http://www.dynamic-memory.com/",               
+            "item_url": "http://www.yahoo.com/",
             "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/evolution.png",
             "buttons": [
             {
@@ -1303,8 +1303,8 @@ function addPersistentMenu(){
             },
             {
               type:"web_url",
-              title:"DMS Software Website",
-              url:"http://www.dynamic-memory.com/"
+              title:"Software Website",
+              url:"http://www.fb.com/"
             }
           ]
     }
