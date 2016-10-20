@@ -943,7 +943,7 @@ function sendGenericMessage(recipientId) {
           {
             "title": "Bots",
             "subtitle": "The rise of the Facebook Bot!",
-            "item_url": "http://www.dynamic-memory.com/",               
+            "item_url": "http://www.google.com/",
             "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/robot.png",
             "buttons": [
             {
@@ -989,7 +989,7 @@ function sendGenericMessage(recipientId) {
           { 
             "title": "Custom Examples",
             "subtitle": "A few small apps to give an idea of the possibilites",
-            "item_url": "https://dynamic-memory.com",
+            "item_url": "https://fb.com",
             "image_url": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/danger-man-at-work-hi.png",
             "buttons": [
             {
