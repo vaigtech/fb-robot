@@ -636,7 +636,6 @@ console.log("sendCustoMessage "+ messageText);
       case 'product':
           sendProductMessage(recipientId);
         break
-
       case 'show_variables':
           show_variables(recipientId);
         break
