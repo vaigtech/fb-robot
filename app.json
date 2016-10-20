@@ -1,7 +1,7 @@
 {
-  "name": "DMS Software Bot",
+  "name": "Software Bot",
   "description": "An example Facebook Bot.",
-  "repository": "https://github.com/matthewericfisher/fb-robot",
+  "repository": "https://github.com/vaigtech/fb-robot/",
   "logo": "https://raw.githubusercontent.com/matthewericfisher/fb-robot/master/img/icon.png",
   "env": {
     "APP_SECRET": {
