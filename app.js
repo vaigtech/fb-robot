@@ -798,11 +798,6 @@ function sendProductMessage(recipientId) {
                                         "type": "postback",
                                         "title": "Show next",
                                         "payload": "PRODUCT",
-                                    },
-                                    {
-                                        "type": "postback",
-                                        "title": "Recomandation",
-                                        "payload": "PRODUCT",
                                     }
                                 ]
                             }
