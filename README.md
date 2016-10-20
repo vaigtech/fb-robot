@@ -1,4 +1,4 @@
-# DMS Software Bot.  A simple conversation bot for Facebook
+# Shopware Software Bot.  A simple conversation bot for Facebook
 
 This project is an example server for Messenger Platform built in Node.js. It was forked from the Facebook example.
 
