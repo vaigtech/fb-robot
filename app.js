@@ -645,14 +645,14 @@ console.log("sendCustoMessage "+ messageText);
       case 'reponse_chooseage_junior':
       case 'reponse_chooseage_girl':
       case 'reponse_chooseage_boy':
-          SELECTED_CUSTOMER_AGE = extractResponce(messageTxt);
+          SELECTED_CUSTOMER_GENDER = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
         break
       case 'response_choosegender_children':
       case 'response_chooseage_men':
       case 'response_choosegender_youth':
       case 'response_choosegender_adults':
-          SELECTED_CUSTOMER_GENDER = extractResponce(messageTxt);
+          SELECTED_CUSTOMER_AGE = extractResponce(messageTxt);
           checkNecessaryVariables(recipientId);
         break
       case 'response_choosecategory_tvs':
