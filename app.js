@@ -636,7 +636,10 @@ console.log("sendCustoMessage "+ messageText);
       case 'product':
           sendProductMessage(recipientId);
         break
-      case 'show_variables':
+      case 'restart_bot':
+          restart_bot(recipientId);
+        break
+      case 'restart_bot':
           show_variables(recipientId);
         break
       case 'reponse_chooseage_women':
@@ -667,24 +670,7 @@ console.log("sendCustoMessage "+ messageText);
     }
     previousMessageHash[recipientId] = messageText.toLowerCase();
 }
-function checkNecessaryVariables(recipientId){
-    var messageText;
-    if(SELECTED_CUSTOMER_GENDER == 0){
-        messageText = 'CHOOSE GENDER CATEGORY';
-        sendJsonMessage(recipientId,messageText);
-    }else if(SELECTED_CUSTOMER_AGE == 0){
-        messageText = 'CHOOSE AGE CATEGORY';
-        sendJsonMessage(recipientId,messageText);
-    }else{
-        messageText = 'MENU';
-        sendTextMessage(recipientId, "Excellent now i Please select category.");
-        sendJsonMessage(recipientId, messageText);
-    }
-}
-function extractResponce(messageTxt){
-    var messageArr = messageTxt.split("_");
-    return messageArr[2];
-}
+
 function sendJsonMessage(recipientId,keyword) {
 console.log("sendJsonMessage " + keyword);
   if (_.has(scriptRules, keyword.toUpperCase())) {
@@ -1400,7 +1386,31 @@ function addKeywordTextStep2(recipientId,messageText)
        stateMachineError(recipientId);
    }
 }
-
+function checkNecessaryVariables(recipientId){
+    var messageText;
+    if(SELECTED_CUSTOMER_GENDER == 0){
+        messageText = 'CHOOSE GENDER CATEGORY';
+        sendJsonMessage(recipientId,messageText);
+    }else if(SELECTED_CUSTOMER_AGE == 0){
+        messageText = 'CHOOSE AGE CATEGORY';
+        sendJsonMessage(recipientId,messageText);
+    }else{
+        messageText = 'MENU';
+        sendTextMessage(recipientId, "Excellent now i Please select category.");
+        sendJsonMessage(recipientId, messageText);
+    }
+}
+function extractResponce(messageTxt){
+    var messageArr = messageTxt.split("_");
+    return messageArr[2];
+}
+function restart_bot(recipientId){
+    SELECTED_CUSTOMER_AGE = 0;
+    SELECTED_CUSTOMER_GENDER = 0;
+    SELECTED_CATEGORY = 0;
+    var messageText = 'welcome';
+    sendJsonMessage(recipientId,messageText);
+}
 function show_variables(recipientId){
     sendTextMessage(recipientId,"selected age."+SELECTED_CUSTOMER_AGE);
     sendTextMessage(recipientId,"selected gender."+SELECTED_CUSTOMER_GENDER);
