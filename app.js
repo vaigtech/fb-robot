@@ -637,6 +637,9 @@ console.log("sendCustoMessage "+ messageText);
       case 'product':
           sendProductMessage(recipientId);
         break
+      case 'receipt':
+         sendReceiptMessage(senderID);
+        break;        
       case 'restart_bot':
           restart_bot(recipientId);
         break
