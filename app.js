@@ -282,7 +282,7 @@ function handleReceivedMessage(event) {
         break;
 
       case 'receipt':
-          console.log("send Receipt Message !!!!!!!!!!!!!!");
+          console.log("send Receipt quickReply Message !!!!!!!!!!!!!!");
           sendReceiptMessage(senderID);
         break;
 
@@ -638,8 +638,8 @@ console.log("sendCustoMessage "+ messageText);
           sendProductMessage(recipientId);
         break
       case 'receipt':
-         sendReceiptMessage(senderID);
-        break;        
+         sendReceiptMessage(recipientId);
+        break;
       case 'restart_bot':
           restart_bot(recipientId);
         break
