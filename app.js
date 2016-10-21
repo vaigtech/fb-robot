@@ -639,7 +639,7 @@ console.log("sendCustoMessage "+ messageText);
       case 'restart_bot':
           restart_bot(recipientId);
         break
-      case 'restart_bot':
+      case 'show_variables':
           show_variables(recipientId);
         break
       case 'reponse_chooseage_women':
