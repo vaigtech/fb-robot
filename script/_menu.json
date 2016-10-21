@@ -25,7 +25,7 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Show Product from Laptops",
+                "title": "Choose this category",
                 "payload": "response_chooseCategory_LAPTOPS"
               }
             ]
@@ -38,7 +38,7 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Show Product from Desktop Computers",
+                "title": "Choose this category",
                 "payload": "response_chooseCategory_COMPUTERS"
               }
             ]
@@ -51,7 +51,7 @@
             "buttons": [
               {
                 "type": "postback",
-                "title": "Show Product from Cameras & Camcorders",
+                "title": "Choose this category",
                 "payload": "response_chooseCategory_CAMERAS"
               }
             ]
