@@ -282,7 +282,8 @@ function handleReceivedMessage(event) {
         break;
 
       case 'receipt':
-        sendReceiptMessage(senderID);
+          console.log("send Receipt Message !!!!!!!!!!!!!!");
+          sendReceiptMessage(senderID);
         break;
 
       case 'quick reply':
