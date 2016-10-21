@@ -1423,6 +1423,7 @@ function restart_bot(recipientId){
     SELECTED_CUSTOMER_AGE = 0;
     SELECTED_CUSTOMER_GENDER = 0;
     SELECTED_CATEGORY = 0;
+    SELECTED_PRODUCT = {};
     var messageText = 'welcome';
     sendJsonMessage(recipientId,messageText);
 }
