@@ -670,10 +670,10 @@ console.log("sendCustoMessage "+ messageText);
 function checkNecessaryVariables(recipientId){
     var messageText;
     if(SELECTED_CUSTOMER_GENDER == 0){
-        messageText = 'CHOOSE AGE CATEGORY';
+        messageText = 'CHOOSE GENDER CATEGORY';
         sendJsonMessage(recipientId,messageText);
     }else if(SELECTED_CUSTOMER_AGE == 0){
-        messageText = 'CHOOSE GENDER CATEGORY';
+        messageText = 'CHOOSE AGE CATEGORY';
         sendJsonMessage(recipientId,messageText);
     }else{
         messageText = 'MENU';
