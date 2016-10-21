@@ -37,6 +37,7 @@ var isStopped = false;
 var SELECTED_CUSTOMER_AGE = 0;
 var SELECTED_CUSTOMER_GENDER = 0;
 var SELECTED_CATEGORY = 0;
+var SELECTED_PRODUCT = {};
 
 var app = express();
 
@@ -754,6 +755,13 @@ function sendProductMessage(recipientId) {
         var shortDescription = item.product.shortDescription;
         var primaryImageUrl = item.product.primaryImageUrl;
         var webUrl = 'https://www.walmart.com'+item.product.canonicalUrl;
+        SELECTED_PRODUCT = {
+            "productName":productName,
+            "shortDescription":shortDescription,
+            "primaryImageUrl":primaryImageUrl,
+            "webUrl":webUrl
+        };
+
         console.log(item);
         var messageData = {
             recipient: {
@@ -1036,7 +1044,17 @@ function sendGenericMessage(recipientId) {
  */
 function sendReceiptMessage(recipientId) {
   // Generate a random receipt ID as the API requires a unique ID
-  var receiptId = "order" + Math.floor(Math.random()*1000);
+    var receiptId = "order" + Math.floor(Math.random()*1000);
+    var  productName = 'Oculus Rift';
+    var  shortDescription = 'Includes: headset, sensor, remote';
+    var  primaryImageUrl = 'http://messengerdemo.parseapp.com/img/riftsq.png';
+   // var  webUrl = 'https://www.walmart.com/ip/Jet-JSM-4340-1-2-in.-Air-Impact-Wrench/37470147';
+    if(SELECTED_PRODUCT){
+        productName = SELECTED_PRODUCT.productName;
+        shortDescription = SELECTED_PRODUCT.shortDescription;
+        primaryImageUrl = SELECTED_PRODUCT.primaryImageUrl;
+       // webUrl = SELECTED_PRODUCT.webUrl;
+    }
 
   var messageData = {
     recipient: {
@@ -1053,12 +1071,12 @@ function sendReceiptMessage(recipientId) {
           payment_method: "Visa 1234",        
           timestamp: "1428444852", 
           elements: [{
-            title: "Oculus Rift",
-            subtitle: "Includes: headset, sensor, remote",
+            title: productName,
+            subtitle: shortDescription,
             quantity: 1,
             price: 599.00,
             currency: "USD",
-            image_url: "http://messengerdemo.parseapp.com/img/riftsq.png"
+            image_url: primaryImageUrl
           }, {
             title: "Samsung Gear VR",
             subtitle: "Frost White",
