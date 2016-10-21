@@ -1077,13 +1077,6 @@ function sendReceiptMessage(recipientId) {
             price: 599.00,
             currency: "USD",
             image_url: primaryImageUrl
-          }, {
-            title: "Samsung Gear VR",
-            subtitle: "Frost White",
-            quantity: 1,
-            price: 99.99,
-            currency: "USD",
-            image_url: "http://messengerdemo.parseapp.com/img/gearvrsq.png"
           }],
           address: {
             street_1: "1 Hacker Way",
